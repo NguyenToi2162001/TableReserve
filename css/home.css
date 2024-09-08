@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.admin {
+    .left {
+        background-color: rgb(178, 15, 69);
+        padding: 0 20px;
+
+        .list {
+            display: flex;
+            padding: 10px 0;
+            align-items: center;
+        }
+
+        i {
+            color: white;
+        }
+
+        p {
+            color: white;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .logo {
+            border-bottom: 2px solid white;
+            position: relative;
+            height: 70px;
+
+            .arrow-left {
+                position: absolute;
+                top: 50%;
+                background-color: black;
+                border: 1px solid black;
+                padding: 0px 5px;
+                border-radius: 50%;
+            }
+
+            h4 {
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+
+        h5 {
+            color: white;
+            padding-bottom: 5px;
+            border-bottom: 2px solid white;
+            font-size: 15px;
+        }
+    }
+
+    .right {
+        flex: 1;
+        background-color: palevioletred;
+        align-items: center;
+
+        .right-head {
+            border-bottom: 2px solid white;
+            padding: 0px 20px;
+            height: 70px;
+
+            .icon {
+                i {
+                    padding-right: 20px;
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+
+            .user {
+                justify-content: end;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .right-main {
+
+            .select {
+                .card {
+                    img {
+                        width: 70%;
+
+                        margin: auto;
+                    }
+
+                    .card-body {
+                        justify-content: space-around;
+
+                        .add {
+                            background-color: green;
+
+                            border: 1px solid green;
+                            border-radius: 5px;
+                            align-items: center;
+
+                            i {
+                                color: green;
+                                background-color: white;
+                                padding: 3px;
+                                border-radius: 50%;
+                            }
+
+                            p {
+                                margin-left: 5px;
+                                color: white;
+                            }
+                        }
+
+                        .cart {
+                            align-items: center;
+                            justify-content: center;
+                            background-color: red;
+                            border-radius: 5px;
+
+                            i {
+                                color: white;
+
+
+                            }
+
+                            p {
+                                margin-left: 5px;
+                                color: white;
+                            }
+                        }
+
+                        .booking {
+                            width: 50%;
+                            margin: auto;
+                            background-color: gold;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 5px;
+                            border-radius: 5px;
+
+                            p {
+                                margin-left: 5px;
+                                color: white;
+                            }
+
+                            i {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .admin {
+        display: flex;
+
+        .left {
+            height: 100vh;
+
+            .logo {
+                .arrow-left {
+                    right: -20px;
+                    transform: translate(50%, -50%);
+                }
+            }
+        }
+
+        .right {
+            .right-main {
+                height: calc(100vh - 70px);
+                overflow-y: auto;
+                position: relative;
+                h4{
+                    position: absolute;
+                    background-color: brown;
+                    padding: 3px 10px;
+                    top: 5px;
+                    left: 5px;
+                    color: white;
+                    border-radius: 50%;
+                }
+                .card {
+                    .card-body {
+                        .add {
+                            padding: 5px 25px;
+                        }
+
+                        .cart {
+                            padding: 5px 25px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .admin {
+        .left {
+            .logo {
+                .arrow-left {
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        .right {
+            .right-main {
+                position: relative;
+                h4{
+                    position: absolute;
+                    background-color: brown;
+                    padding: 3px 10px;
+                    top: 5px;
+                    left: 5px;
+                    color: white;
+                    border-radius: 50%;
+
+                }
+                .card {
+                    .card-body {
+                        .add {
+                            padding: 5px 25px;
+
+                            p {
+                                font-size: 10px;
+                            }
+
+                            i {
+                                font-size: 10px;
+                            }
+                        }
+
+                        .cart {
+                            p {
+                                padding: 5px 25px;
+                                font-size: 10px;
+                            }
+
+                            i {
+                                font-size: 10px;
+                            }
+                        }
+
+                        .booking {
+                            padding: 5px 10px;
+
+                            p {
+                                font-size: 10px;
+                            }
+
+                            i {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
