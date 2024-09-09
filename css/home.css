@@ -30,6 +30,9 @@ img {
 
 .admin {
     .left {
+        .hidden{
+            display: none;
+        }
         background-color: rgb(178, 15, 69);
         padding: 0 20px;
 
@@ -37,18 +40,14 @@ img {
             display: flex;
             padding: 10px 0;
             align-items: center;
-        }
-
-        i {
             color: white;
         }
 
         p {
-            color: white;
             margin-left: 20px;
             font-size: 15px;
         }
-
+        
         .logo {
             border-bottom: 2px solid white;
             position: relative;
@@ -61,6 +60,7 @@ img {
                 border: 1px solid black;
                 padding: 0px 5px;
                 border-radius: 50%;
+                color: white;
             }
 
             h4 {
@@ -99,6 +99,19 @@ img {
 
             .user {
                 justify-content: end;
+                .hiddens{
+                    display: none;
+                }
+                .drop{
+                    position: absolute;
+                    background-color: aquamarine;
+                    right:0;
+                    z-index: 10;
+                   
+                    li{
+                        list-style: none;
+                    }
+                }
 
                 img {
                     width: 30px;
@@ -109,7 +122,9 @@ img {
         }
 
         .right-main {
-
+            .box{
+                display: none;
+            }
             .select {
                 .card {
                     img {
@@ -208,11 +223,16 @@ img {
                 h4{
                     position: absolute;
                     background-color: brown;
-                    padding: 3px 10px;
+                    width: 30px;
+                    height: 30px;
                     top: 5px;
                     left: 5px;
                     color: white;
                     border-radius: 50%;
+                    font-size: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 .card {
                     .card-body {
@@ -235,6 +255,9 @@ img {
 @media screen and (max-width: 768px) {
     .admin {
         .left {
+            .list-menu{
+                display: none;
+            }
             .logo {
                 .arrow-left {
                     right: 0;
@@ -254,6 +277,7 @@ img {
                     left: 5px;
                     color: white;
                     border-radius: 50%;
+                    font-size: 10px;
 
                 }
                 .card {
