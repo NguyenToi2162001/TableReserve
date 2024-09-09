@@ -31,4 +31,5 @@ document.querySelector(".user").addEventListener("click",() =>{
     drops.classList.toggle("hiddens")
     
 })
+var logins = document.querySelector(".login")
 

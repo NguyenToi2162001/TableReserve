@@ -38,12 +38,31 @@ main{
         margin: auto;
         border-radius: 10px;
         background-color: white;
+        display: flex;
         .login{
             width: 70%;
             margin: auto;
-           
+            align-content: center;
+            .form{
+                margin-top: 20px;
+            }
+            p{
+                text-align: end;
+                font-size: 13px;
+            }
             h1{
                 text-align: center;
+                font-size: 30px;
+                font-weight: bolder;
+            }
+            .btn{
+                width: 100%;
+                margin-top: 20px;
+            }
+            .sp{
+                justify-content: center;
+                align-items: center;
+                h2
             }
 
         }
