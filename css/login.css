@@ -34,12 +34,14 @@ main{
     align-items: center;
     .container{
         width: 40%;
-        height: 50%;
+        height: 60%;
         margin: auto;
         border-radius: 10px;
-        padding: 40px 30px;
         background-color: white;
         .login{
+            width: 70%;
+            margin: auto;
+           
             h1{
                 text-align: center;
             }
