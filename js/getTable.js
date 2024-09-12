@@ -10,10 +10,10 @@ function displayTables(data) {
                                             <div class="cart d-flex">
                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                 <p>Cart</p>
-                                            </div>` : `<div class="booking d-flex" data-bs-toggle="modal" data-bs-target="#booking">
+                                            </div>` : `<div onclick=getID(${value.id}) class="booking d-flex" data-bs-toggle="modal" data-bs-target="#booking">
                                                 <i class="fa-regular fa-calendar-plus"></i>
                                                 <p>BOOKING</p>
-                                            </div>`
+                                            </div>`;
         tables.innerHTML += `<div class="col">
                                     <div class="card">
                                         <img src= ${img} alt="...">
@@ -27,4 +27,14 @@ function displayTables(data) {
 
     })
 
+}
+var idTable;
+function getID (id){
+    idTable = id ;
+}
+function booking() {
+    var customerNames = document.getElementById("customer-Name").value;
+    var quantitys = document.getElementById("quantity").value;
+    var object = { id :idTable, customerName: customerNames, quantity:quantitys, status: true }
+    edit(urlTable,idTable,object)
 }

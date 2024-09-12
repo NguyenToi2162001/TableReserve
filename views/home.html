@@ -105,17 +105,17 @@
                 <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Customer Name</label>
-                      <input type="email" class="form-control" placeholder="Customer Name">
+                      <input type="email"  id="customer-Name" class="form-control" placeholder="Customer Name">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Quantity</label>
-                      <input type="password" class="form-control" placeholder="Quantity">
+                      <input type="number" id="quantity" class="form-control" placeholder="Quantity">
                     </div>
                   </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Send</button>
+              <button onclick=booking() type="button" class="btn btn-primary">Send</button>
             </div>
           </div>
         </div>

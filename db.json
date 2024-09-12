@@ -1,12 +1,52 @@
 {
-    "tables": [
-      { "id": "1", "customerName": "", "quantity": null, "status": false },
-      { "id": "2", "customerName": "", "quantity": null, "status": false },
-      { "id": "3", "customerName": "toi", "quantity": 7, "status": true },
-      { "id": "4", "customerName": "", "quantity": null, "status": false },
-      { "id": "5", "customerName": "thuc", "quantity": 4, "status": true },
-      { "id": "6", "customerName": "", "quantity": null, "status": false },
-      { "id": "7", "customerName": "ti", "quantity": 2, "status": true },
-      { "id": "8", "customerName": "", "quantity": null, "status": false }
-    ]
-  }
+  "tables": [
+    {
+      "id": "1",
+      "customerName": "toi",
+      "quantity": "3",
+      "status": true
+    },
+    {
+      "id": "2",
+      "customerName": "toi",
+      "quantity": "2",
+      "status": true
+    },
+    {
+      "id": "3",
+      "customerName": "toi",
+      "quantity": 7,
+      "status": true
+    },
+    {
+      "id": "4",
+      "customerName": "",
+      "quantity": "",
+      "status": true
+    },
+    {
+      "id": "5",
+      "customerName": "thuc",
+      "quantity": 4,
+      "status": true
+    },
+    {
+      "id": "6",
+      "customerName": "",
+      "quantity": null,
+      "status": false
+    },
+    {
+      "id": "7",
+      "customerName": "ti",
+      "quantity": 2,
+      "status": true
+    },
+    {
+      "id": "8",
+      "customerName": "",
+      "quantity": null,
+      "status": false
+    }
+  ]
+}
