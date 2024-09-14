@@ -62,7 +62,14 @@ main{
             .sp{
                 justify-content: center;
                 align-items: center;
-                h2
+                margin-top: 20px;
+                h2{
+                    font-size: 20px;
+                }
+                h3{
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
             }
 
         }

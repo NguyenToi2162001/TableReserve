@@ -32,9 +32,18 @@ var idTable;
 function getID (id){
     idTable = id ;
 }
-function booking() {
+console.log(document.getElementById("booking"));
+
+document.getElementById("booking").addEventListener("submit", (e) =>{
+    e.preventDefault();
+    console.log("svdsv");
+    
+    if(!e.target.checkValidity()){
+        console.log("Validation error");
+        return;
+    }
     var customerNames = document.getElementById("customer-Name").value;
     var quantitys = document.getElementById("quantity").value;
     var object = { id :idTable, customerName: customerNames, quantity:quantitys, status: true }
     edit(urlTable,idTable,object)
-}
+})

@@ -1,4 +1,5 @@
 const urlTable = "http://localhost:3000/tables";
+const urlFood =" http://localhost:3000/foods"
 
 function getAll (url, callback){
     fetch(url)
