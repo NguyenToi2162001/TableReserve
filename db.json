@@ -2,9 +2,9 @@
   "tables": [
     {
       "id": "1",
-      "customerName": "toi",
-      "quantity": "3",
-      "status": false
+      "customerName": "ttt",
+      "quantity": "1",
+      "status": true
     },
     {
       "id": "2",
@@ -14,9 +14,9 @@
     },
     {
       "id": "3",
-      "customerName": "toi",
-      "quantity": 7,
-      "status": false
+      "customerName": "tôi",
+      "quantity": "6",
+      "status": true
     },
     {
       "id": "4",
@@ -49,78 +49,205 @@
       "status": false
     }
   ],
-  "foods" : [
+  "foods": [
     {
-      "id" : "1" ,
-      "nameFood" : "Chicken",
-      "img" : "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price" :39
+      "id": "1",
+      "nameFood": "Chicken",
+      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
+      "price": 39
     },
     {
-      "id" : "2" ,
-      "nameFood" : "Đùi Gà",
-      "img" : "https://img.freepik.com/free-photo/delicious-fried-chicken-legs-meat-with-spices-vegetables_114579-43941.jpg?ga=GA1.2.501212640.1726150130&semt=ais_hybrid",
-      "price": 40 
+      "id": "2",
+      "nameFood": "Đùi Gà",
+      "img": "https://img.freepik.com/free-photo/delicious-fried-chicken-legs-meat-with-spices-vegetables_114579-43941.jpg?ga=GA1.2.501212640.1726150130&semt=ais_hybrid",
+      "price": 40
     },
     {
-      "id" : "3" ,
-      "nameFood" : "Mỳ Xào",
-      "img" : "https://img.freepik.com/free-photo/stir-fried-instant-noodles-with-seafood-variety-vegetable_1150-27319.jpg?ga=GA1.2.501212640.1726150130&semt=ais_hybrid",
-      "price" : 10.0
+      "id": "3",
+      "nameFood": "Mỳ Xào",
+      "img": "https://img.freepik.com/free-photo/stir-fried-instant-noodles-with-seafood-variety-vegetable_1150-27319.jpg?ga=GA1.2.501212640.1726150130&semt=ais_hybrid",
+      "price": 10
     },
     {
-      "id" : "4" ,
-      "nameFood" : "Thịt Heo Xào",
-      "img" : "https://img.freepik.com/free-photo/stir-fried-kale-spicy-crispy-pork-wooden-table-thai-food-concept_1150-26547.jpg?ga=GA1.1.501212640.1726150130&semt=ais_hybrid",
-      "price" : 10.0
+      "id": "4",
+      "nameFood": "Thịt Heo Xào",
+      "img": "https://img.freepik.com/free-photo/stir-fried-kale-spicy-crispy-pork-wooden-table-thai-food-concept_1150-26547.jpg?ga=GA1.1.501212640.1726150130&semt=ais_hybrid",
+      "price": 10
     },
     {
-      "id" : "5" ,
-      "nameFood" : "Bún Bò",
-      "img" : "https://img.freepik.com/free-photo/chicken-green-curry-bowl_1150-23912.jpg?ga=GA1.1.501212640.1726150130&semt=ais_hybrid",
-      "price" : 10.0
+      "id": "5",
+      "nameFood": "Bún Bò",
+      "img": "https://img.freepik.com/free-photo/chicken-green-curry-bowl_1150-23912.jpg?ga=GA1.1.501212640.1726150130&semt=ais_hybrid",
+      "price": 10
     },
     {
-      "id" : "6" ,
-      "nameFood" : "Chicken",
-      "img" : "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price" : 10.0
+      "id": "6",
+      "nameFood": "Chicken",
+      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
+      "price": 10
     },
     {
-      "id" : "7" ,
-      "nameFood" : "Chicken",
-      "img" : "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price" : 10.0
+      "id": "7",
+      "nameFood": "Chicken",
+      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
+      "price": 10
     },
     {
-      "id" : "8" ,
-      "nameFood" : "Chicken",
-      "img" : "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price" : 10.0
+      "id": "8",
+      "nameFood": "Chicken",
+      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
+      "price": 10
     },
     {
-      "id" : "9" ,
-      "nameFood" : "Chicken",
-      "img" : "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price" : 10.0
+      "id": "9",
+      "nameFood": "Chicken",
+      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
+      "price": 10
     },
     {
-      "id" : "10" ,
-      "nameFood" : "Chicken",
-      "img" : "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price" : 10.0
+      "id": "10",
+      "nameFood": "Chicken",
+      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
+      "price": 10
     },
     {
-      "id" : "11" ,
-      "nameFood" : "Chicken",
-      "img" : "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price" : 10.0
+      "id": "11",
+      "nameFood": "Chicken",
+      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
+      "price": 10
     },
     {
-      "id" : "12" ,
-      "nameFood" : "Chicken",
-      "img" : "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price" : 10.0
+      "id": "12",
+      "nameFood": "Chicken",
+      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
+      "price": 10
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "items": [
+        {
+          "idFood": "1",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "items": []
+    },
+    {
+      "id": "1",
+      "items": [
+        {
+          "idFood": "1",
+          "quantity": "1"
+        },
+        {
+          "idFood": "2",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "items": []
+    },
+    {
+      "id": "2",
+      "items": [
+        {
+          "idFood": "2",
+          "quantity": "1"
+        },
+        {
+          "idFood": "3",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "items": [
+        {
+          "idFood": "5",
+          "quantity": "2"
+        },
+        {
+          "idFood": "7",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "items": [
+        {
+          "idFood": "3",
+          "quantity": "1"
+        },
+        {
+          "idFood": "4",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "items": [
+        {
+          "idFood": "1",
+          "quantity": "1"
+        },
+        {
+          "idFood": "2",
+          "quantity": "1"
+        },
+        {
+          "idFood": "3",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "items": [
+        {
+          "idFood": "1",
+          "quantity": "1"
+        },
+        {
+          "idFood": "2",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "items": [
+        {
+          "idFood": "1",
+          "quantity": "2"
+        },
+        {
+          "idFood": "2",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "items": [
+        {
+          "idFood": "3",
+          "quantity": "2"
+        },
+        {
+          "idFood": "4",
+          "quantity": "2"
+        }
+      ]
     }
   ]
 }

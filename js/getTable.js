@@ -1,13 +1,17 @@
 getAll(urlTable, displayTables);
 function displayTables(data) {
     const tables = document.querySelector(".tables")
-    data.forEach((value, index, array) => {
+    data.forEach((value) => {
+        const selectfood = document.querySelector(".order-table")
+        if(value.status){
+            selectfood.innerHTML +=`<option value = "${value.id}"> Table ${value.id}</option>`
+        }
         let img = value.status ? "../img/meeting.png" : "../img/dining-room.png"
         let add = value.status ? `<div class="add d-flex">
                                                 <i class="fa-solid fa-plus"></i>
                                                 <p>Add</p>
                                             </div>
-                                            <div class="cart d-flex">
+                                            <div onclick=showCart(${value.id}) class="cart d-flex"  data-bs-toggle="modal" data-bs-target="#cart">
                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                 <p>Cart</p>
                                             </div>` : `<div onclick=getID(${value.id}) class="booking d-flex" data-bs-toggle="modal" data-bs-target="#booking">
@@ -47,3 +51,27 @@ document.getElementById("booking").addEventListener("submit", (e) =>{
     var object = { id :idTable, customerName: customerNames, quantity:quantitys, status: true }
     edit(urlTable,idTable,object)
 })
+getAll(urlOder,getOrder);
+let orders;
+function getOrder(data){
+    orders=data;
+}
+function showCart(id) {
+    const cart = document.getElementById("list-cart");
+    cart.innerHTML = "";
+     const order = orders.find((a) => a.id == id);
+     order.items.forEach((item,index) => {
+         const food = listFood.find(a => a.id == item.idFood);
+       cart.innerHTML += `
+           <tr>
+              <th scope="row">${index + 1}</th>
+              <td>
+                <img style="width: 50px;" src=${food.img} alt="">
+              </td>
+              <td>${food.nameFood}</td>
+              <td>${food.price}</td>
+              <td>${item.quantity}</td>
+            </tr>
+       `
+     })   
+}

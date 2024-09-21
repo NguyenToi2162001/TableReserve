@@ -21,9 +21,18 @@ lists.forEach((item,index) => {
         item.style.color = "black";
         boxs.forEach(item => item.style.display= "none")
         boxs[index].style.display = "block";
+        localStorage.setItem("key",index);
     })
    
+   
 })
+var index = localStorage.getItem("key");
+if (index) {
+    lists[index].style.color="black"
+    boxs[index].style.display = "block";
+
+}
+
 
 var drops = document.querySelector(".drop")
 
