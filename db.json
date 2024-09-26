@@ -125,58 +125,26 @@
   ],
   "orders": [
     {
-      "id": "1",
-      "items": [
-        {
-          "idFood": "1",
-          "quantity": "1"
-        }
-      ]
-    },
-    {
-      "id": "1",
-      "items": []
+      "id": "d480"
     },
     {
       "id": "1",
       "items": [
         {
           "idFood": "1",
-          "quantity": "1"
+          "quantity": 2
         },
         {
           "idFood": "2",
-          "quantity": "1"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "items": []
-    },
-    {
-      "id": "2",
-      "items": [
-        {
-          "idFood": "2",
-          "quantity": "1"
+          "quantity": 5
         },
         {
           "idFood": "3",
-          "quantity": "1"
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "items": [
-        {
-          "idFood": "5",
-          "quantity": "2"
+          "quantity": 2
         },
         {
-          "idFood": "7",
-          "quantity": "1"
+          "idFood": "4",
+          "quantity": 2
         }
       ]
     },
@@ -184,68 +152,12 @@
       "id": "3",
       "items": [
         {
-          "idFood": "3",
-          "quantity": "1"
-        },
-        {
-          "idFood": "4",
-          "quantity": "2"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "items": [
-        {
           "idFood": "1",
-          "quantity": "1"
+          "quantity": 1
         },
         {
           "idFood": "2",
-          "quantity": "1"
-        },
-        {
-          "idFood": "3",
-          "quantity": "1"
-        }
-      ]
-    },
-    {
-      "id": "1",
-      "items": [
-        {
-          "idFood": "1",
-          "quantity": "1"
-        },
-        {
-          "idFood": "2",
-          "quantity": "1"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "items": [
-        {
-          "idFood": "1",
-          "quantity": "2"
-        },
-        {
-          "idFood": "2",
-          "quantity": "1"
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "items": [
-        {
-          "idFood": "3",
-          "quantity": "2"
-        },
-        {
-          "idFood": "4",
-          "quantity": "2"
+          "quantity": 1
         }
       ]
     }

@@ -42,3 +42,21 @@ document.querySelector(".user").addEventListener("click",() =>{
 })
 var logins = document.querySelector(".login")
 
+function addFood(id){
+    const selectfood = document.querySelector(".order-table")
+    lists[1].style.color= "white";
+    lists[2].style.color= "black";
+    boxs[1].style.display = "none";
+    boxs[2].style.display = "block";
+    selectfood.value=id;
+}
+function getPayBill(){
+    const selectpaybill = document.querySelector(".order-paybill");
+    lists[1].style.color= "white";
+    lists[3].style.color= "black";
+    boxs[1].style.display = "none";
+    boxs[3].style.display = "block";
+    selectpaybill.value=idPaybill;
+    
+   
+}

@@ -40,23 +40,4 @@ function displayFood(data) {
     })
 
 })}
-document.querySelector(".order").addEventListener("click" , () =>{
-  let items = [];
-  let listCol = document.querySelectorAll(".foods .col");
-
-  let idTable = document.querySelector(".order-table")
-  listCol.forEach(a => {
-    
-    let quantity =  a.querySelector("input").value;
-    if(parseInt(quantity)>0){
-      let idFood = a.querySelector("p").textContent;
-      items.push({idFood: idFood , quantity: quantity});
-    }
-  });
-  let order = {
-    id: idTable.value,
-    items: items ,
-  }
-  add(urlOder,order);
-})
 

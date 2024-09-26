@@ -2,12 +2,14 @@ getAll(urlTable, displayTables);
 function displayTables(data) {
     const tables = document.querySelector(".tables")
     data.forEach((value) => {
-        const selectfood = document.querySelector(".order-table")
+        const selectfood = document.querySelector(".order-table");
+        const selectpaybill = document.querySelector(".order-paybill");
         if(value.status){
-            selectfood.innerHTML +=`<option value = "${value.id}"> Table ${value.id}</option>`
+            selectfood.innerHTML +=`<option value = "${value.id}"> Table ${value.id}</option>`;
+            selectpaybill.innerHTML +=`<option value = "${value.id}"> Table ${value.id}</option>`
         }
         let img = value.status ? "../img/meeting.png" : "../img/dining-room.png"
-        let add = value.status ? `<div class="add d-flex">
+        let add = value.status ? `<div onclick=addFood(${value.id}) class="add d-flex">
                                                 <i class="fa-solid fa-plus"></i>
                                                 <p>Add</p>
                                             </div>
@@ -51,12 +53,10 @@ document.getElementById("booking").addEventListener("submit", (e) =>{
     var object = { id :idTable, customerName: customerNames, quantity:quantitys, status: true }
     edit(urlTable,idTable,object)
 })
-getAll(urlOder,getOrder);
-let orders;
-function getOrder(data){
-    orders=data;
-}
+
+let idPaybill ;
 function showCart(id) {
+    idPaybill=id;
     const cart = document.getElementById("list-cart");
     cart.innerHTML = "";
      const order = orders.find((a) => a.id == id);
@@ -74,4 +74,25 @@ function showCart(id) {
             </tr>
        `
      })   
+}
+function showBill(idPaybill){
+    console.log(idPaybill);
+    
+    const bill = document.getElementById("list-bill");
+    bill.innerHTML= "";
+    const paybill = orders.find((a) => a.id == idPaybill);
+    paybill.item.forEach((item,index)=>{
+        const food = listFood.find(a => a.id == item.idFood);
+        bill.innerHTML += `
+        <tr>
+              <th scope="row">${index + 1}</th>
+              <td>
+                <img style="width: 50px;" src=${food.img} alt="">
+              </td>
+              <td>${food.nameFood}</td>
+              <td>${food.price}</td>
+              <td>${item.quantity}</td>
+            </tr>
+        `
+    })
 }
