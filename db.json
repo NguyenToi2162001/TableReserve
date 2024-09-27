@@ -51,12 +51,6 @@
   ],
   "foods": [
     {
-      "id": "1",
-      "nameFood": "Chicken",
-      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price": 39
-    },
-    {
       "id": "2",
       "nameFood": "Đùi Gà",
       "img": "https://img.freepik.com/free-photo/delicious-fried-chicken-legs-meat-with-spices-vegetables_114579-43941.jpg?ga=GA1.2.501212640.1726150130&semt=ais_hybrid",
@@ -106,18 +100,6 @@
     },
     {
       "id": "10",
-      "nameFood": "Chicken",
-      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price": 10
-    },
-    {
-      "id": "11",
-      "nameFood": "Chicken",
-      "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
-      "price": 10
-    },
-    {
-      "id": "12",
       "nameFood": "Chicken",
       "img": "https://img.freepik.com/premium-photo/baked-holiday-turkey-with-garnish-isolated-white_221436-144.jpg?w=996",
       "price": 10

@@ -89,7 +89,9 @@
                 <button class="order">Order</button>
 
               </div>
-              <button  data-bs-toggle="modal" data-bs-target="#addfood" class="order">Add Food</button>
+              <div>
+                <button data-bs-toggle="modal" data-bs-target="#addfood" class="order">Add Food</button>
+              </div>
             </div>
             <div class="main-food">
               <div class="row row-cols-md-2 row-cols-xl-4 row-cols-1 foods g-4">
@@ -172,40 +174,8 @@
       </div>
     </div>
   </header>
-  <!-- Modal Addfood -->
-
-  <div class="modal fade" id="addfood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">AddFood</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Name Food</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Quantity</label>
-              <input type="number" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Image</label>
-              <input type="file" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3">
-              <img src="https://idodesign.vn/wp-content/uploads/2023/04/nhung-mau-thiet-ke-logo-nha-hang-quan-an-sang-tao-2.jpg" alt="">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal Cart -->
-  <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal deleteFood -->
+  <div class="modal fade" id="deleteFood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -213,74 +183,125 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-              </tr>
-            </thead>
-            <tbody id="list-cart"></tbody>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button onclick=getPayBill() data-bs-dismiss="modal" type="button" class="btn btn-primary">PayBill</button>
+          <h4 class="text-center">Do you want delete Food</h4>
+          <img id="img-delete" src="" alt="">
+          <div class="text-center mt-3" >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" id="xoa-food" class="btn btn-primary">Yes</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="modal fade" id="booking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">TABLE BOOKING</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="booking" class="needs-validation" novalidate>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Customer Name</label>
-              <input required type="text" id="customer-Name" class="form-control" placeholder="Customer Name">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Quantity</label>
-              <input required type="number" id="quantity" class="form-control" placeholder="Quantity">
-            </div>
-            <div class="mb-3">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Send</button>
-            </div>
-          </form>
+    <!-- Modal Addfood -->
 
+    <div class="modal fade" id="addfood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">AddFood</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="add-food" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name Food</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Price</label>
+                <input type="number" class="form-control" id="price" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Image</label>
+                <input type="file" class="form-control" id="image-food" required>
+              </div>
+              <div class="mb-3">
+                <img id="img-food"
+                  src="https://idodesign.vn/wp-content/uploads/2023/04/nhung-mau-thiet-ke-logo-nha-hang-quan-an-sang-tao-2.jpg"
+                  alt="">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
-  <main>
-  </main>
-  <footer>
+    <!-- Modal Cart -->
+    <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                </tr>
+              </thead>
+              <tbody id="list-cart"></tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button onclick=getPayBill() data-bs-dismiss="modal" type="button" class="btn btn-primary">PayBill</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="booking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">TABLE BOOKING</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="booking" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Customer Name</label>
+                <input required type="text" id="customer-Name" class="form-control" placeholder="Customer Name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Quantity</label>
+                <input required type="number" id="quantity" class="form-control" placeholder="Quantity">
+              </div>
+              <div class="mb-3">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </form>
 
-  </footer>
+          </div>
 
-  <script src="../js/api.js"></script>
-  <script src="../js/getTable.js"></script>
-  <script src="../js/getFood.js"></script>
-  <script src="../js/order.js"></script>
-  <script src="../js/validation.js"></script>
-  <script src="../js/menu.js"></script>
+        </div>
+      </div>
+    </div>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- Firebase Storage -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="../js/firebaseconfig.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/getTable.js"></script>
+    <script src="../js/getFood.js"></script>
+    <script src="../js/order.js"></script>
+    <script src="../js/validation.js"></script>
+    <script src="../js/menu.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
