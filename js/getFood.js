@@ -1,6 +1,7 @@
 getAll(urlFood, displayFood);
 const storage = firebase.storage();
 let listFood;
+let idxoa;
 function displayFood(data) {
   listFood = data;
   const food = document.querySelector(".foods");
@@ -14,7 +15,7 @@ function displayFood(data) {
                                         
                                         <div>
                                             <i onclick="deletefood(${value.id}, '${value.img}')" data-bs-toggle="modal" data-bs-target="#deleteFood" class="fa-solid fa-trash-can me-2"></i>
-                                            <i class="fa-solid fa-pen-to-square"></i>
+                                            <i onclick="editfood(${value.id})"data-bs-toggle="modal" data-bs-target="#addfood" class="fa-solid fa-pen-to-square"></i>
                                         </div>
                                        
                                         </div>
@@ -62,13 +63,35 @@ document.getElementById("add-food").addEventListener("submit", async (e) => {
   const name = document.getElementById("name").value;
   const price = document.getElementById("price").value;
   const imgUrl = await uploadImage();
-  const newFood = {
-    nameFood: name,
-    img: imgUrl,
-    price: price
-  }
-  add(urlFood, newFood);
-})
+
+  let idFood = 1 ;
+  listFood.forEach(a =>{
+    if(a.id == idFood) {
+      idFood++;
+    }
+    })
+    if(idxoa){
+      const newFood = {
+        nameFood: name,
+        img: imgUrl,
+        price: price,
+      }
+      edit(urlFood,idxoa,newFood);
+      
+    }
+    else{
+      const newFood = {
+        id: idFood ,
+        nameFood: name,
+        img: imgUrl,
+        price: price,
+      }
+      add(urlFood, newFood);
+      
+    }
+  })
+
+
 function uploadImage() {
   return new Promise((resolve, reject) => {
     const file = document.getElementById("image-food").files[0];
@@ -94,22 +117,37 @@ function uploadImage() {
     }
   });
 }
-function deleted(url,id) {
+function deleted(url, id) {
   fetch(`${url}/${id}`, {
-      method: 'DELETE',
-    })
+    method: 'DELETE',
+  })
     .then(response => response.json())
-    .then(data => {      
+    .then(data => {
     })
     .catch(error => console.error('Lỗi khi cập nhật đơn hàng', error));
 }
-let idxoa;
-function deletefood(id,img) {
+
+function deletefood(id, img) {
   idxoa = id;
-  document.getElementById("img-delete").src = img ;
-  
+  document.getElementById("img-delete").src = img;
+
 }
 
-document.getElementById("xoa-food").addEventListener("click",  () => {
-  deleted(urlFood,idxoa);
+document.getElementById("xoa-food").addEventListener("click", () => {
+  deleted(urlFood, idxoa);
 })
+function editfood(id) {
+  idxoa=id;
+  const food = listFood.find(item => item.id == id);
+  console.log(food);
+  const name = document.getElementById("name").value;
+  const price = document.getElementById("price").value;
+  const image = document.getElementById("img-food");
+  const total = document.getElementById("total");
+  total.innerHTML="EditFood";
+  name.value= food.nameFood;
+  price.value=food.price;
+  image.src=food.img;
+
+
+}

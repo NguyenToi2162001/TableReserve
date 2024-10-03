@@ -75,24 +75,33 @@ function showCart(id) {
        `
      })   
 }
-function showBill(idPaybill){
-    console.log(idPaybill);
+const paybill = document.querySelector(".order-paybill") ;
+paybill.addEventListener("change", () => {
+    console.log(paybill.value);
+    const order = orders.find(a => a.id ==  paybill.value );
+    console.log(order);
     
-    const bill = document.getElementById("list-bill");
-    bill.innerHTML= "";
-    const paybill = orders.find((a) => a.id == idPaybill);
-    paybill.item.forEach((item,index)=>{
-        const food = listFood.find(a => a.id == item.idFood);
-        bill.innerHTML += `
+    const listpay = document.getElementById("list-bill");
+    listpay.innerHTML = "";
+    order.items.forEach((a,index)=>{
+        let food =listFood.find(b => b.id ==a.idFood);
+        listpay.innerHTML += `
         <tr>
               <th scope="row">${index + 1}</th>
               <td>
                 <img style="width: 50px;" src=${food.img} alt="">
               </td>
               <td>${food.nameFood}</td>
+              <td>${a.quantity}</td>
               <td>${food.price}</td>
-              <td>${item.quantity}</td>
+              
             </tr>
-        `
-    })
+       `
+    }
+)
+})
+function showBill(){
+    deleted(urlFood,paybill.value);
+    const table = {  customerName: "",  quantity: "",status: false };
+    edit(urlTable,paybill.value,table);
 }

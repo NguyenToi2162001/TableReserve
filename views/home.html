@@ -106,7 +106,7 @@
                   <select class="select order-paybill ms-2">
                     <option selected>Choose a table</option>
                   </select>
-                  <button onclick=showBill() class="paybill">Paybill</button>
+                  <button id="paybill" onclick=showBill() class="paybill">Paybill</button>
 
                 </div>
               </div>
@@ -119,6 +119,7 @@
                       <th scope="col">Name</th>
                       <th scope="col">Quantity</th>
                       <th scope="col">Price</th>`
+                      
                     </tr>
                   </thead>
                   <tbody id="list-bill">
@@ -174,31 +175,13 @@
       </div>
     </div>
   </header>
-  <!-- Modal deleteFood -->
-  <div class="modal fade" id="deleteFood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h4 class="text-center">Do you want delete Food</h4>
-          <img id="img-delete" src="" alt="">
-          <div class="text-center mt-3" >
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-            <button type="button" id="xoa-food" class="btn btn-primary">Yes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  
     <!-- Modal Addfood -->
-
     <div class="modal fade" id="addfood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">AddFood</h5>
+            <h5 class="modal-title" id="total">AddFood</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -255,6 +238,7 @@
         </div>
       </div>
     </div>
+
     <div class="modal fade" id="booking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -280,6 +264,24 @@
 
           </div>
 
+        </div>
+      </div>
+    </div>
+    Modal deleteFood
+  <div class="modal fade" id="deleteFood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 class="text-center">Do you want delete Food</h4>
+          <img id="img-delete" src="" alt="">
+          <div class="text-center mt-3" >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" id="xoa-food" class="btn btn-primary">Yes</button>
+          </div>
         </div>
       </div>
     </div>

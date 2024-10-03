@@ -22,6 +22,7 @@ function edit(url,id,object) {
       })
       .catch(error => console.error('Lỗi khi cập nhật đơn hàng', error));
 }
+
 function add(url,object) {
   fetch(url, {
     method: 'POST',
@@ -36,4 +37,13 @@ function add(url,object) {
       fetchPosts();
     })
     .catch(error => console.error('Error creating post:', error));
+}
+function deleted(url,id){
+  fetch(`${url}/${id}`,{
+    method: 'DELETE',
+  })
+  .then( response => response.json())
+  .then(data =>{
+  })
+  .catch(error => console.error('Lỗi khi cập nhật đơn hàng ', error));
 }
